@@ -57,12 +57,14 @@
 .nav > div ul li {float: left; width: 50%; padding-bottom: 2px;}
 .nav > div:last-child ul li{width: 100%;} /*ie9부터 적용*/
 .nav > div.last ul li {width: 100%;}
-.nav > div ul li a:hover { text-decoration: underline;}
+.nav > div ul li a:hover { text-decoration: underline; }
+.nav > div li a:after{content: ''; width: 0%; height: 1px; background: #25a2d0; position: absolute; left: 0; bottom: 0; transition: all 0.3s ease;}
+.nav > div li:hover a:after {width: 100%;}
 
 /*타이틀*/
 .tit {position: relative; text-align: center}
 .tit h2{font-size: 40px; color: #3c94c4; padding: 5px 0; letter-spacing: 2px; font-family: 'Black And White Picture', sans-serif;}
-.tit .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px}
+.tit .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px }
 .tit .btn:hover {background-position: -60px -600px;}
 
 /*배너*/

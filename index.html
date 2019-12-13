@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="loga">
     <meta name="description" content="웹 표준을 준수한  사이트입니다.">
     <meta name="keyword" content="웹표준, 웹접근성, 사이트제작, 웹스토보이">
@@ -11,6 +12,8 @@
     <!--style-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
 
     <!--webfonts-->
     <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture&display=swap" rel="stylesheet">
@@ -126,13 +129,22 @@
         <div id="cont_ban">
             <div class="container">
                 <div class="ban">
-                    <a href="#" class="prev"><span class="ir_pm">이전이미지</span></a>
+                    <!-- <a href="#" class="prev"><span class="ir_pm">이전이미지</span></a>
                     <ul>
                         <li class="con_img1"><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></li>
                         <li class="con_img2"><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></li>
                         <li class="con_img3"><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></li>
                     </ul>
-                    <a href="#" class="next"><span class="ir_pm">다음이미지</span></a>
+                    <a href="#" class="next"><span class="ir_pm">다음이미지</span></a> -->
+                    <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
+                    <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
+                    <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
+                    <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
+                    <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
+                    <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
+                    <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
+                    <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
+                    <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
                 </div>
             </div>
         </div>
@@ -220,43 +232,45 @@
                         <h3><span class="ico_img ir_pm">아이콘</span><em class="ico_tit">Notice</em></h3>
                         <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         <!-- 로그인 -->
-                                <div id="login_wrap">
-                                    <h4 class="ir_so">로그인 정보</h4>
-                                    <form action="post" id="login_form" name="login_form">
-                                        <fieldset>
-                                            <legend class="ir_so">로그인 및 관련 설정</legend>
-                                            <div class="login_header">
-                                                <h5 class="ir_so">로그인 보안</h5>
-                                                <div class="lh_check">
-                                                    <input type="checkbox" id="infor_check" class="input_check">
-                                                    <label for="infor_check">로그인 상태 유지</label>
-                                                </div>
-                                                <div class="lh_ip">
-                                                    IP보안<em>ON</em>
-                                                </div>
-                                            </div>
-                                            <div class="login_content">
-                                                <h5 class="ir_so">로그인 영역</h5>
-                                                <div class="lc_text">
-                                                    <label for="uid" class="ir_so">아이디</label>
-                                                    <input type="text" id="uid" name="uid" class="input_text" maxlength="20" placeholder="아이디">
-                                                    <label for="upw" class="ir_so">비밀번호</label>
-                                                    <input type="password"id="upw" name="upw" class="input_text" maxlength="20" placeholder="비밀번호">
-                                                    <button class="lc_btn" type="submit">로그인</button>
-                                                </div>
-                                            </div>
-                                            <div class="login_footer">
-                                                <h5 class="ir_so">로그인 문제해결</h5>
-                                                <ul>
-                                                    <li><a href="#"><strong>회원가입</strong></a> /</li>
-                                                    <li><a href="#">아이디</a>&middot;<a href="#">비밀번호 찾기</a></li>
-                                                </ul>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
+                        <div id="login_wrap">
+                            <h4 class="ir_so">로그인 정보</h4>
+                            <form action="post" id="login_form" name="login_form">
+                                <fieldset>
+                                    <legend class="ir_so">로그인 및 관련 설정</legend>
+                                    <div class="login_header">
+                                        <h5 class="ir_so">로그인 보안</h5>
+                                        <div class="lh_check">
+                                            <input type="checkbox" id="infor_check" class="input_check">
+                                            <label for="infor_check">로그인 상태 유지</label>
+                                        </div>
+                                        <div class="lh_ip">
+                                            IP보안<em>ON</em>
+                                        </div>
+                                    </div>
+                                    <div class="login_content">
+                                        <h5 class="ir_so">로그인 영역</h5>
+                                        <div class="lc_text">
+                                            <label for="uid" class="ir_so">아이디</label>
+                                            <input type="text" id="uid" name="uid" class="input_text" maxlength="20"
+                                                placeholder="아이디">
+                                            <label for="upw" class="ir_so">비밀번호</label>
+                                            <input type="password" id="upw" name="upw" class="input_text" maxlength="20"
+                                                placeholder="비밀번호">
+                                            <button class="lc_btn" type="submit">로그인</button>
+                                        </div>
+                                    </div>
+                                    <div class="login_footer">
+                                        <h5 class="ir_so">로그인 문제해결</h5>
+                                        <ul>
+                                            <li><a href="#"><strong>회원가입</strong></a> /</li>
+                                            <li><a href="#">아이디</a>&middot;<a href="#">비밀번호 찾기</a></li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
                         <!-- //로그인 -->
-                        
+
                         <!-- 팝업 -->
                         <div class="ad mt15">
                             <h4>Advertisement</h4>
@@ -364,46 +378,46 @@
                                         <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                     </ul>
                                 </li>
-                            </ul>    
+                            </ul>
                         </div>
                         <!-- //탭메뉴 -->
                         <!--Notice4-->
-                            <div class="notice4 mt15">
-                                <h4>최신 <em>공지사항</em></h4>
-                                <ul>
-                                    <li><a href="#">웹디지이너와 웹 퍼블리셔ㄴㅇㄴ머움너</a><span>2018.11.19</span></li>
-                                    <li><a href="#">웹디지이너와 웹 퍼블리셤눙ㄴ머움너</a><span>2018.11.19</span></li>
-                                    <li><a href="#">웹디지이너와 웹 퍼블리셤눙ㄴ머움너</a><span>2018.11.19</span></li>
-                                </ul>
-                                <a href="#" class="more" title="더보기">더보기</a>
-                            </div>
-                            <!-- //Notice4-->
+                        <div class="notice4 mt15">
+                            <h4>최신 <em>공지사항</em></h4>
+                            <ul>
+                                <li><a href="#">웹디지이너와 웹 퍼블리셔ㄴㅇㄴ머움너</a><span>2018.11.19</span></li>
+                                <li><a href="#">웹디지이너와 웹 퍼블리셤눙ㄴ머움너</a><span>2018.11.19</span></li>
+                                <li><a href="#">웹디지이너와 웹 퍼블리셤눙ㄴ머움너</a><span>2018.11.19</span></li>
+                            </ul>
+                            <a href="#" class="more" title="더보기">더보기</a>
+                        </div>
+                        <!-- //Notice4-->
                     </div>
                     <!-- //co5 -->
                     <div class="column col6">
                         <h3><span class="ico_img ir_pm">아이콘</span><em class="ico_tit">Gallery</em></h3>
                         <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         <!--갤러리-->
-                            <div class="gellery ">
-                                <h4>포트폴리오</h4>
-                                <div class="gellery_btn">
-                                    <ul>
-                                        <li class="gb_icon1"><a href="" class="ir_pm">시작</a></li>
-                                        <li class="gb_icon2 "><a href="" class="ir_pm">정지</a></li>
-                                        <li class="gb_icon3"><a href="" class="ir_pm">이전이미지</a></li>
-                                        <li class="gb_icon4"><a href="" class="ir_pm">다음이미지</a></li>
-                                    </ul>
-                                </div>
-                                <div class="gellery_img">
-                                    <ul>
-                                        <li><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></li>
-                                        <li><a href="#"><img src="img/gallery02.jpg" alt="갤러리2"></a></li>
-                                        <li><a href="#"><img src="img/gallery03.jpg" alt="갤러리3"></a></li>
-                                        <li><a href="#"><img src="img/gallery04.jpg" alt="갤러리4"></a></li>
-                                        <li><a href="#"><img src="img/gallery05.jpg" alt="갤러리5"></a></li>
-                                    </ul>
-                                </div>
+                        <div class="gellery ">
+                            <h4>포트폴리오</h4>
+                            <div class="gellery_btn">
+                                <ul>
+                                    <li class="gb_icon1"><a href="" class="ir_pm">시작</a></li>
+                                    <li class="gb_icon2 "><a href="" class="ir_pm">정지</a></li>
+                                    <li class="gb_icon3"><a href="" class="ir_pm">이전이미지</a></li>
+                                    <li class="gb_icon4"><a href="" class="ir_pm">다음이미지</a></li>
+                                </ul>
                             </div>
+                            <div class="gellery_img">
+                                <ul>
+                                    <li><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></li>
+                                    <li><a href="#"><img src="img/gallery02.jpg" alt="갤러리2"></a></li>
+                                    <li><a href="#"><img src="img/gallery03.jpg" alt="갤러리3"></a></li>
+                                    <li><a href="#"><img src="img/gallery04.jpg" alt="갤러리4"></a></li>
+                                    <li><a href="#"><img src="img/gallery05.jpg" alt="갤러리5"></a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <!-- //갤러리-->
                     </div>
 
@@ -436,6 +450,29 @@
         </div>
     </div>
     <!--//footer-->
+    <!-- script -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $('.ban').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dot : true,
+            autoplay : true,
+            autoplaySpeed : 1000
+        });
+
+
+        //전체 메뉴 접기 펼치기
+        $("nav").hide();
+        $(".btn").click(function () {
+            $("#nav").slideToggle();
+        }); //버튼을 클릭했을때
+    </script>
+    <!-- //script -->
 
     <!--//wrap-->
-</body></html>
+</body>
+
+</html>
